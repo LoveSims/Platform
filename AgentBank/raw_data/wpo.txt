@@ -1,0 +1,55 @@
+[Part 1. Story of your life]
+Tell me the story of your life from as early as you remember to today, including all the important choices you’ve made along the way. (8 minutes)
+Response:  I was born in a small town in Virginia as a first child. My younger sister was born when I was three years old, then we moved to a bigger house. When I was six, I started elementary school then I hated it. I never spoke in class during kindergarten because I did not like the other people. Then, in first grade, they started separating me from others because I was too far ahead of them academically. By the time I started middle school, I had to take most of my classes from a nearby high school because I was super smart. I did not actually like going to school and studying that much so I often got into trouble. By the time I was in high school I started taking online math classes from Stanford and I was doing research with a local math professor. I started dating a girl when I was 16, that also distracted me from studying. When I applied to undergrad, I applied as a math and physics major and decided to go to Caltech. Once I got into Caltech, then I kept working on math, but I also added CS major. During my freshman year, I stopped dating the girl I was dating for 3 years. In sophomore year, I started dating another girl while taking a lot of CS and math classes but I was doing fine. I decided to go to Oxford between my sophomore and junior year and do research in the math institute there. But while I was there, I decided I no longer wanted to be in math or academia. When I got back to Caltech, I decided to focus more on CS theory. Then in junior year perhaps one of the biggest decisions I had to make was between going to MIT or a research institute in Korea for my summer between junior and senior year. I made the unconventional choice of going to Korea instead of MIT, and that changed my perspective on life pretty largely. It made me focus more on practical life aspects rather than just a mindset focused towards academics, and I even considered just going to work and not pursuing graduate degrees after graduating. But I ended up deciding to just stop doing theory and focused more on machine learning and actually took the chance during covid to return to Korea and lived there for over a year while doing a masters online through UC Irvine. Then after finishing my masters I started a PhD in the business school here at Stanford and have focused on very applied work in ML and experimentation while interning at Uber over the summer. I actually plan on permanently living in Korea eventually after finishing my PhD and establishing a career here first. That pretty much got to me the point in life I am at now. 
+
+[Part 2. School life]
+What is your major, and what do you study? (2 minutes)
+Response:  
+ 
+Undergrad major was math and computer science, masters was in CS, PhD is in Operations at the GSB
+ 
+Who are your friends, and why are they important to you? (4 minutes)
+Response:  
+ 
+My friends are one best friend from undergrad who has always been someone I can rely on and enjoy spending time with, friends I met in Korea who showed me a lot of new things and experiences, one really close friend from my masters who was a great person to live with for a while and always a good source of advice, and a couple close friends I’ve met during my PhD who have been a great source of support during the program.
+ 
+I think all of my friends are important to me for providing a strong sense of loyalty and also strong sources of fun and enjoyment.
+ 
+What is your daily life like? (4 minutes)
+Response:  
+ 
+Wake up, go to the gym for some weightlifting, go back to my apartment to eat some food, do some work in my room for about 2 to 3 hours. This time is usually spent on focused tasks like reading research papers, coding, or writing. Then I eat in my apartment again, then either go to the office and do a longer stretch of work for about 4 or 5 hours or have classes and meetings mixed in in the afternoon, take an occasional break for a walk to get some coffee, head back to my apartment and eat dinner, then work for about 2 to 3 more hours in my room, this might involve wrapping up tasks from earlier in the day, responding to emails, or planning for upcoming projects. And then I do a night routine and go to bed and repeat.
+
+[Part 3. Rapid-fire round]
+When was the last time you cried, and why? (2 minutes)
+Response:  
+ 
+I have extremely dry eyes and can barely cry, the last time was maybe 5 or so years ago when I broke up with my college gf. 
+
+What qualities do you value most in other people? (2 minutes)
+Response:  
+I generally don’t expect too much from other people, but for the people that I keep close to me in my life I hope that they are interesting, loyal, and helpful in some way, whether it's offering support during tough times or otherwise contributing positively to each other's lives. 
+ 
+Where have you lived? (2 minutes)
+Response:  
+Mechanicsville, Virginia
+Pasadena, CA
+Irvine, CA
+Daejeon, Korea
+Seoul, Korea
+Stanford, CA
+ 
+What would you do if you didn’t have to work? (2 minutes)
+Response:  
+ 
+I would probably pursue something more creative and less structured than corporate careers or academia. I would be pretty interested in starting particular businesses that I’d find interesting across a range of areas, likely not even technical, such as coffee chains or clothing brands. 
+
+[Part 4. Personal values and closing]
+What are your life values? (4 minutes)
+Response:  
+ 
+Leave a lasting impact and legacy, establish generational wealth, and win at things I care about. I’ve always been extremely competitive but narrowing down on what I actually care about and want to win at is something I’ve had to get better at. Establishing generational wealth is important to me not just in terms of financial success but also in providing opportunities and security for my family and future generations. 
+
+
+
+

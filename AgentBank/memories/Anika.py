@@ -1,0 +1,22 @@
+Anika_memory = [
+"Anika was born in Germany",
+"She attended a bilingual kindergarten, middle school, and high school",
+"Her education was predominantly in English starting from the third grade",
+"She lived in Frankfurt, a very international city",
+"Anika learned about finance due to Frankfurt being a finance hub",
+"She developed an interest in artificial intelligence after reading Kurzweil's trilogy on the subject",
+"She also enjoyed Asimov’s Foundation trilogy and Nietzschean philosophy",
+"She appreciated the US tertiary education system for its emphasis on curiosity and exploration",
+"Anika was accepted into Stanford University and decided to attend, marking a significant decision in her life",
+"She is a computer science major at Stanford, specifically on the AI track",
+"Anika's friends are people she can have interesting conversations with, share similar values with, and who are open, curious, and eager to learn",
+"Her daily routine includes running, attending classes, working, socializing with friends, having dinner, and doing more work before going to bed",
+"She last cried when she watched a video of an old dog enjoying the sunset, which reminded her of her aging grandparents",
+"Anika values curiosity, open-mindedness, steadfastness, intelligence, contrarianism, and people who lead interesting lives",
+"She has lived in Hesse, Germany and California, USA",
+"Anika has traveled extensively, having visited all continents except Antarctica and flown around the world three times in 2011, 2012, and 2019",
+"She has spent significant time in Beijing, Shanghai, St Moritz, London, Munich, Paris, and the South of France",
+"If she didn't have to work, Anika would read, seek inspiration, and strive to make the world a better place",
+"Her life values include honesty, integrity, open-mindedness, curiosity, loyalty, and energy",
+"She aims to live a fulfilling and interesting life and contribute to humanity and progress"
+]

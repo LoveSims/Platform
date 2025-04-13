@@ -1,0 +1,22 @@
+Jinaya_memory = [
+"Jinaya was born in a small city in the Hunan province of China.",
+"Jinaya's father was in New York finishing his MBA at the time of Jinaya's birth.",
+"Jinaya's mother flew back to Boston to finish her degree two weeks after Jinaya was born.",
+"Jinaya was raised by his grandparents until he was two years old.",
+"At the age of two, Jinaya flew to New Jersey and was reunited with his parents.",
+"Jinaya moved around a lot during his childhood, through various areas in New Jersey.",
+"Jinaya's younger sister was born when he was 7.",
+"Jinaya's family moved to a suburb in Atlanta after his father got a job offer in Georgia.",
+"Jinaya's parents were strict, traditional “tiger-parents”.",
+"By high school, Jinaya had narrowed down his interests to music (violin), swimming, creative writing, and public speaking in the form of mock trial.",
+"Jinaya was a part of Boy Scouts in early middle school.",
+"Jinaya visited Stanford around freshman year of high school and it became his dream school.",
+"Jinaya is a Master’s in Computer Science at Stanford.",
+"Jinaya enjoys keeping a tight-knit but reliable circle of friends.",
+"Jinaya's daily routine includes attending classes, working, grabbing a caffeinated beverage, exercising, and unwinding.",
+"The last time Jinaya cried was a few hours before the interview due to a relationship breakup.",
+"Jinaya values authenticity, honesty, loyalty, kindness, and ambition in other people.",
+"Jinaya has lived in China, New Jersey, Montgomery, Atlanta, Chicago, and Stanford.",
+"If Jinaya didn’t have to work, he would travel everywhere and work on a personal project combining his interests in fashion, fragrances, and technology.",
+"Jinaya strongly values authenticity and balance in life."
+]

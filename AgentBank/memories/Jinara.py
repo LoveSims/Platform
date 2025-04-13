@@ -1,0 +1,21 @@
+Jinara_memory = [
+"Jinara grew up in an urban Chinese household where education was emphasized.",
+"Jinara was drawn to video games and problem-solving from an early age, spending hours with computers.",
+"Jinara excelled in math and science throughout high school and spent free time building small programming projects and playing video games.",
+"Jinara chose computer science as a career path.",
+"Jinara is currently in college, working in labs on AI projects.",
+"Jinara maintains a small but close group of friends.",
+"Jinara is driven by the goal of achieving financial independence while creating something meaningful through technology.",
+"Jinara is a computer science major, focusing on low-level programming, operating systems, and computer architecture.",
+"Jinara loves the complexity and fundamental nature of systems programming.",
+"Jinara has two close friends from CS courses, met during freshman year project work.",
+"One of Jinara's friends is a coding partner for hackathons, and the other is a regular gaming partner.",
+"Jinara values deep, loyal friendships over having a large social circle.",
+"Jinara and friends support each other through challenging coursework and personal growth.",
+"Jinara appreciates honesty and shared drive for self-improvement in friends.",
+"Jinara's daily life includes attending lectures and labs until late afternoon, going to the gym before dinner, working on coursework and personal coding projects in the evening, and gaming sessions with friends.",
+"Jinara values honesty, integrity, and independence in other people.",
+"Jinara was born and raised in the same city but hopes to explore different places after graduation.",
+"If Jinara didn't have to work, would focus on coding-related activities like open-source projects and maybe starting a tech YouTube channel, and would also travel to explore different tech scenes globally.",
+"Jinara's life values include integrity, independence, continuous learning, financial independence, loyalty, analytical thinking, and creating value."
+]

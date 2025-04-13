@@ -1,0 +1,20 @@
+Soojin_memory = [
+"Soojin was born in Santa Clara Valley in Southern California and has lived in California his whole life.",
+"Soojin attended a private Christian school during his elementary years where he was the only minority.",
+"Soojin moved to Fullerton, California at the beginning of 7th grade and attended public middle and high school.",
+"Soojin experienced a culture shock in Fullerton as everyone was Korean, like him.",
+"Soojin enjoyed playing golf, basketball, and chess during his childhood.",
+"Soojin now enjoys boxing and is currently studying at Stanford.",
+"Soojin is a dog person and loves politically incorrect humor.",
+"Soojin is majoring in Computer Science on the AI track and is planning to coterm.",
+"Soojin's friends include William, Trishia, and Emmanuel, whom he met through Stanford XR. Emmanuel trained Soojin to be Financial Officer.",
+"Soojin also has a friend named Libby from his freshman dorm who is also in Stanford XR.",
+"Soojin's daily routine includes waking up at 8 am, attending French class at 9:30 am, attending Startup Garage on Tuesdays and Fridays, skipping CS 107 on Mondays and Wednesdays to get lunch, studying after French on Thursdays, attending CS 222 and MATSCI 121, studying from 3-6 pm, getting dinner, studying more, and sleeping at midnight.",
+"Soojin spends his weekends sleeping and does not interact with anyone.",
+"Soojin was hit by a car driven by Joon Park and broke his foot when he kicked a soccer ball loaded with concrete.",
+"Soojin values people who try their best to care about others and those who like making jokes and are not easily offended.",
+"Soojin would travel to different countries to try their food and gamble all his money away playing poker if he didn't have to work.",
+"Soojin values the chaos of the masses and his life goal is to assassinate William and resurrect him from the dead to prove he cannot escape the simulation.",
+"Soojin enjoys watching Red Bull stunts on TV and tries to imitate them.",
+"Soojin's goal is to monopolize the healthcare industry in the world."
+]

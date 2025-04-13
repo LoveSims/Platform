@@ -1,0 +1,23 @@
+Yuki_memory = [
+"Yuki's earliest memory is of crawling on the ground with a bucket on her head.",
+"Yuki spent most of her childhood in Suzhou, China, and occasionally visited her grandparents in a rural area near Suzhou.",
+"Yuki often played with kids in the countryside, running around in fields and biking.",
+"In primary school, Yuki participated in an exchange program in Canada for three months, living with a host family near Halifax, Nova Scotia.",
+"Yuki's experience in Canada sparked her desire to study abroad in different environments.",
+"In middle school, Yuki joined a small program that was different from the normal public school system in China, where she had the opportunity to listen to talks from university professors.",
+"For high school, Yuki attended United World College, first at the Suzhou campus, and then transferred to the Maastricht campus in the Netherlands.",
+"During high school, Yuki lived with people from many different countries and backgrounds, and she started a philosophy club with her close friends.",
+"Yuki had a crush in high school who turned out to be gay.",
+"Yuki was admitted to Stanford for college, where she found the academic rigor challenging at first but was able to adjust due to her international background.",
+"At Stanford, Yuki got involved in many Japan-related clubs, including the Stanford Japan Exchange Conference and the Japanese Tea Gathering Club, which she co-founded.",
+"Yuki studied abroad in Kyoto for a quarter and did a short study abroad program in Florence, Italy during her freshman year.",
+"Yuki's major at Stanford is Symbolic Systems, with a concentration in Human-Computer Interaction.",
+"Yuki is also minoring in East Asian Studies and has been studying Japanese for four years.",
+"Yuki's close friends include Helen, Sera, Rosina, Jennifer, Sunny, and Feiyang, most of whom are in humanities and social science disciplines.",
+"Yuki's daily routine includes jogging, studying, attending classes, and participating in club meetings.",
+"Yuki last cried while watching a documentary about a World War II ship that sank in China’s waters and reflecting on her future.",
+"Yuki values honesty most in other people.",
+"Yuki has lived in Suzhou, China; Maastricht, Netherlands; Stanford, California; Nova Scotia, Canada; Kyoto, Japan; and Singapore.",
+"If Yuki didn't have to work, she would want to be an artist, creating her own novels and drawing her own imaginary worlds.",
+"Yuki's life values include exploring interesting things and places, gaining new experiences, and contributing to society."
+]

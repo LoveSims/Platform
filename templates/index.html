@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multi-Agent Dating Simulation</title>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/themes/light.css"
+    />
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2c3e50;
+        --background-color: #fcfcfc;
+        --text-color: #34495e;
+        --border-color: #bdc3c7;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .game-container {
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+        background-color: var(--background-color);
+        padding: 20px;
+        padding-top: 40px;
+      }
+      .message {
+        max-width: 70%;
+        padding: 8px 12px;
+        margin: 5px 0;
+        border-radius: 18px;
+        font-size: 14px;
+        line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+      }
+      .message .sender-name {
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+      .message.user-agent {
+        background-color: var(--primary-color);
+        color: white;
+        align-self: flex-end;
+      }
+      .message.other-agent {
+        background-color: #e5e5ea;
+        color: #000000;
+        align-self: flex-start;
+      }
+      .message.date-start {
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+      }
+      .start-page {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-right: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #2980b9;
+      }
+      button:disabled {
+        background-color: var(--border-color);
+        cursor: not-allowed;
+      }
+      .controls {
+        margin-bottom: 15px;
+      }
+      #date-log-container {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-Agent Dating Simulation</h1>
+      <div id="start-page" class="start-page">
+        <div class="form-group">
+          <label for="matching-mode">Matching Mode:</label>
+          <select id="matching-mode" class="form-control">
+            <option value="one-to-one">One-to-One Match</option>
+            <option value="one-to-all">One-to-All Match</option>
+            <option value="all-pairs">All Pairs Match</option>
+          </select>
+        </div>
+
+        <div id="agent-selection" class="form-group">
+          <div id="one-to-one-agents" style="display: none;">
+            <div class="form-group">
+              <label for="agent1-select">First Agent:</label>
+              <select id="agent1-select" class="form-control"></select>
+            </div>
+            <div class="form-group">
+              <label for="agent2-select">Second Agent:</label>
+              <select id="agent2-select" class="form-control"></select>
+            </div>
+          </div>
+
+          <div id="one-to-all-agent" style="display: none;">
+            <label for="single-agent-select">Select Agent:</label>
+            <select id="single-agent-select" class="form-control"></select>
+          </div>
+        </div>
+
+        <div id="date-context-group" class="form-group">
+          <label for="date-context">Date Context:</label>
+          <textarea
+            id="date-context"
+            rows="3"
+            placeholder="Describe the date context..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="date-duration">Responses per Date:</label>
+          <select id="date-duration" class="form-control">
+            <option value="6">6 responses</option>
+            <option value="10" selected>10 responses</option>
+            <option value="16">16 responses</option>
+          </select>
+        </div>
+
+        <button id="start-dates" class="btn btn-primary">Start Dates</button>
+        <button id="reset-game" class="btn btn-secondary">Reset</button>
+        <button id="download-log" class="btn btn-secondary" style="display: none">
+          Download Log
+        </button>
+      </div>
+      <div id="game-page" style="display: none">
+        <div class="controls">
+          <button id="reset-game">Reset</button>
+          <button id="download-log" style="display: none">
+            Download Transcript
+          </button>
+        </div>
+        <div id="date-log-container" class="game-container"></div>
+      </div>
+    </div>
+
+    <script>
+      const startPage = document.getElementById("start-page");
+      const gamePage = document.getElementById("game-page");
+      const dateLogContainer = document.getElementById("date-log-container");
+      const startDatesBtn = document.getElementById("start-dates");
+      const resetGameBtn = document.getElementById("reset-game");
+      const downloadLogBtn = document.getElementById("download-log");
+      const agent1Select = document.getElementById("agent1-select");
+      const agent2Select = document.getElementById("agent2-select");
+      const singleAgentSelect = document.getElementById("single-agent-select");
+      const dateContextInput = document.getElementById("date-context");
+      const dateDurationSelect = document.getElementById("date-duration");
+
+      // Populate agent selects
+      const agentList = [
+        "Julian",
+        "Sakura",
+        "Riya",
+        "Kai",
+        "Jinwoo",
+        "Mei Ling",
+        "Ethan",
+        "Anika",
+        "Jinara",
+        "Diego",
+        "Jinhee",
+        "Minji",
+        "Mingxia",
+        "Anwen",
+        "Soojin",
+        "Niran",
+        "Arjun",
+        "Eleni",
+        "Leyla",
+        "Jinsoo",
+        "Sofia",
+        "Jinaya",
+        "Lucia",
+        "Meilin",
+        "Rafael",
+        "Leila",
+        "Anaya",
+        "Lianhua",
+        "Marcus",
+        "Thao",
+        "Camila",
+        "Anjali",
+        "Yuki",
+        "Marek",
+        "Kiran",
+        "Elena",
+      ];
+      agentList.forEach((agent) => {
+        ['agent1-select', 'agent2-select', 'single-agent-select'].forEach(selectId => {
+          const select = document.getElementById(selectId);
+          const option = document.createElement("option");
+          option.value = agent;
+          option.textContent = agent;
+          select.appendChild(option);
+        });
+      });
+
+      // Handle matching mode changes
+      const matchingMode = document.getElementById('matching-mode');
+      const oneToOneAgents = document.getElementById('one-to-one-agents');
+      const oneToAllAgent = document.getElementById('one-to-all-agent');
+      const dateContextGroup = document.getElementById('date-context-group');
+
+      matchingMode.addEventListener('change', () => {
+        oneToOneAgents.style.display = 'none';
+        oneToAllAgent.style.display = 'none';
+        dateContextGroup.style.display = 'block';
+
+        switch(matchingMode.value) {
+          case 'one-to-one':
+            oneToOneAgents.style.display = 'block';
+            break;
+          case 'one-to-all':
+            oneToAllAgent.style.display = 'block';
+            break;
+          case 'all-pairs':
+            dateContextGroup.style.display = 'none';
+            break;
+        }
+      });
+
+      function displayMessage(messageData) {
+        const gameContainer = document.getElementById("date-log-container");
+        const messageDiv = document.createElement("div");
+        
+        if (messageData.number === 0) {
+          messageDiv.className = "message date-start";
+          messageDiv.textContent = messageData.response;
+        } else {
+          const isUserAgent = messageData.response.startsWith(agent1Select.value + ":");
+          messageDiv.className = `message ${isUserAgent ? "user-agent" : "other-agent"}`;
+          
+          const senderNameDiv = document.createElement("div");
+          senderNameDiv.className = "sender-name";
+          senderNameDiv.textContent = messageData.agent;
+          
+          const messageContentDiv = document.createElement("div");
+          messageContentDiv.textContent = messageData.response.split(": ")[1];
+          
+          messageDiv.appendChild(senderNameDiv);
+          messageDiv.appendChild(messageContentDiv);
+        }
+        
+        gameContainer.appendChild(messageDiv);
+        gameContainer.scrollTop = gameContainer.scrollHeight;
+      }
+
+      function startEventStream() {
+        const eventSource = new EventSource('/stream');
+        
+        eventSource.onmessage = function(event) {
+          const messageData = JSON.parse(event.data);
+          displayMessage(messageData);
+        };
+        
+        eventSource.onerror = function(error) {
+          console.error('EventSource failed:', error);
+          eventSource.close();
+        };
+        
+        return eventSource;
+      }
+
+      async function fetchDates() {
+        const gameContainer = document.getElementById("date-log-container");
+        gameContainer.innerHTML = "";
+        
+        try {
+          const eventSource = startEventStream();
+          const response = await fetch("/run_dates", { method: "POST" });
+          const data = await response.json();
+          
+          if (data.error) {
+            console.error(data.error);
+            eventSource.close();
+            return;
+          }
+          
+          // The eventSource will automatically handle displaying messages
+          // We'll close it when the dates are completed
+          if (data.status === "completed") {
+            setTimeout(() => eventSource.close(), 1000);
+          }
+        } catch (error) {
+          console.error("Error fetching dates:", error);
+        }
+      }
+
+      startDatesBtn.addEventListener("click", () => {
+        const mode = matchingMode.value;
+        let selectedAgents = [];
+        let dateContext = '';
+
+        switch(mode) {
+          case 'one-to-one':
+            selectedAgents = [
+              document.getElementById('agent1-select').value,
+              document.getElementById('agent2-select').value
+            ];
+            dateContext = dateContextInput.value.trim();
+            break;
+          case 'one-to-all':
+            selectedAgents = [document.getElementById('single-agent-select').value];
+            dateContext = dateContextInput.value.trim();
+            break;
+          case 'all-pairs':
+            selectedAgents = ['all'];
+            break;
+        }
+
+        const dateDuration = dateDurationSelect.value;
+
+        if ((mode !== 'all-pairs' && !dateContext) || !dateDuration) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+
+        fetch("/start_dates", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            mode: mode,
+            agents: selectedAgents,
+            dateContext: dateContext,
+            dateDuration: parseInt(dateDuration),
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "success") {
+              startPage.style.display = "none";
+              gamePage.style.display = "block";
+              fetchDates();
+            } else {
+              alert("Failed to start the simulation. Please try again.");
+            }
+          });
+      });
+
+      resetGameBtn.addEventListener("click", () => {
+        console.log("Resetting game...");
+        fetch("/reset", { method: "POST" })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "reset") {
+              dateLogContainer.innerHTML = "";
+              startPage.style.display = "block";
+              gamePage.style.display = "none";
+              downloadLogBtn.style.display = "none";
+              dateContextInput.value = "";
+            }
+          });
+      });
+
+      downloadLogBtn.addEventListener("click", () => {
+        window.location.href = "/download_log";
+      });
+    </script>
+  </body>
+</html>

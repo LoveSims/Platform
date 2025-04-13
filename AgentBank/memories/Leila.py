@@ -1,0 +1,23 @@
+Leila_memory = [
+"Leila doesn't have many memories of her childhood.",
+"Leila attended a public school in Hangzhou for primary school.",
+"She then attended a private middle school in Hangzhou for two years, where she studied for the National Olympiad in Informatics.",
+"Leila transferred to a new international school in her city in grade nine due to fear of high school entrance exam.",
+"The international school she attended had about 20 students and 15 teachers.",
+"Leila transferred from the international school due to its poor learning environment.",
+"She got into the UWC Costa Rica campus for grades 11 and 12.",
+"Leila found the school administration at UWC Costa Rica to be horrible.",
+"She experienced 'Tico Time' in Costa Rica, where everything started about 30 minutes late.",
+"Leila decided to apply to Carleton College in Minnesota to experience a real winter.",
+"She studied mathematics and psychology, with a minor in neuroscience, during her undergraduate at Carleton College.",
+"At Stanford, Leila is doing a master’s in symbolic systems.",
+"Leila's friends are Ruyu and Alice, both of whom she met during high school.",
+"Ruyu once booked a flight to Minnesota to visit Leila during a mental breakdown.",
+"Alice and Leila support each other during emotional breakdowns and play Werewolf together.",
+"Leila usually wakes up around 10 or 11 a.m. and goes to bed around 2 or 3 a.m.",
+"She cried last while watching a documentary about children with dyslexia in China.",
+"Leila values kindness and wisdom in other people.",
+"She has lived in Hangzhou, China; Costa Rica; Minnesota; and currently at Stanford.",
+"If she didn’t have to work, Leila would do philanthropy work, particularly in the field of education.",
+"Leila values experience, happiness, and kindness in life."
+]
