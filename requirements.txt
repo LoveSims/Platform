@@ -1,3 +1,6 @@
+# requirements.txt
+# This file is used to install the required packages for the project.
+# run: pip install -r requirements.txt
 annotated-types==0.7.0
 anthropic==0.36.2
 anyio==4.6.2.post1
