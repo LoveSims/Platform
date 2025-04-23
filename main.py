@@ -42,18 +42,22 @@ class Game:
         self.date_context = context
         print(f"Date context set to: {self.date_context}")
 
-    def set_pairs(self, mode, selected_agents):
+    def set_pairs(self, mode: str, selected_agents: list[str]):
+        """Populate self.current_pairs based on the chosen mode."""
         if mode == "one-to-one":
+            if len(selected_agents) < 2:
+                raise ValueError("one-to-one mode requires exactly two agents")
             self.current_pairs = [(selected_agents[0], selected_agents[1])]
+
         elif mode == "one-to-all":
-            main_agent = selected_agents[0]
+            if not selected_agents:
+                raise ValueError("one-to-all mode requires at least one agent")
+            main_agent   = selected_agents[0]
             other_agents = [a["name"] for a in agent_list if a["name"] != main_agent]
             self.current_pairs = [(main_agent, other) for other in other_agents]
-        else:  # all-pairs
-            all_agents = [a["name"] for a in agent_list]
-            self.current_pairs = [(a1, a2)
-                                  for i, a1 in enumerate(all_agents)
-                                  for a2 in all_agents[i+1:]]
+
+        else:
+            raise ValueError(f"Unsupported mode '{mode}'")
 
     def run_dates(self):
         for agent1_name, agent2_name in self.current_pairs:
@@ -177,22 +181,27 @@ def index():
 
 @app.route('/start_dates', methods=['POST'])
 def start_dates():
+    """Initialize a new Game and validate that the mode is either
+    one‑to‑one or one‑to‑all.  Any other value returns HTTP 400."""
     global game
     data = request.get_json()
 
     mode = data.get('mode')
+    if mode not in ("one-to-one", "one-to-all"):
+        return jsonify({"error": f"Unsupported mode '{mode}'"}), 400
+
     selected_agents = data.get('agents')
-    date_context = data.get('dateContext', '')
-    date_duration = data.get('dateDuration', 10)
+    date_context    = data.get('dateContext', '')
+    date_duration   = data.get('dateDuration', 10)
 
     game = Game(date_duration=date_duration)
-
-    if mode != 'all-pairs':
-        game.set_date_context(date_context)
-
+    game.set_date_context(date_context)
     game.set_pairs(mode, selected_agents)
 
-    print(f"Game initialized with mode: {mode}, agents: {selected_agents}, context: {date_context}, duration: {date_duration}")
+    print(
+        f"Game initialized | mode: {mode} | agents: {selected_agents} | "
+        f"context: {date_context} | duration: {date_duration}"
+    )
     return jsonify({"status": "success"})
 
 @app.route('/run_dates', methods=['POST'])

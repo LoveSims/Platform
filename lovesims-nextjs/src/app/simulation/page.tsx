@@ -1,13 +1,13 @@
 'use client';
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Users, User, UsersRound } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
-import { agentList } from "@/lib/constants"
-import { AgentDetails } from "@/components/agent-details"
-import { ScrollArea } from "@/components/ui/scroll-area"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowLeft, UsersRound, User } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { agentList } from "@/lib/constants";
+import { AgentDetails } from "@/components/agent-details";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function SimulationPage() {
   const [selectedAgent, setSelectedAgent] = useState<string | null>(null);
@@ -25,7 +25,8 @@ export default function SimulationPage() {
           <h1 className="text-2xl font-bold">Choose Simulation Mode</h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        {/* ——— Mode cards ——— */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <Link href="/simulation/one-to-one">
             <Card className="hover:bg-accent cursor-pointer">
               <CardHeader>
@@ -53,22 +54,9 @@ export default function SimulationPage() {
               </CardHeader>
             </Card>
           </Link>
-
-          <Link href="/simulation/all-pairs">
-            <Card className="hover:bg-accent cursor-pointer">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Users className="mr-2" />
-                  All Pairs
-                </CardTitle>
-                <CardDescription>
-                  Simulate dates between all possible pairs
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
         </div>
 
+        {/* ——— Agent inspector ——— */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Available Agents</CardTitle>
@@ -80,7 +68,7 @@ export default function SimulationPage() {
                 {agentList.map((agent) => (
                   <Button
                     key={agent}
-                    variant={selectedAgent === agent ? "default" : "outline"}
+                    variant={selectedAgent === agent ? 'default' : 'outline'}
                     onClick={() => setSelectedAgent(agent)}
                     className="w-full"
                   >
@@ -92,9 +80,7 @@ export default function SimulationPage() {
           </CardContent>
         </Card>
 
-        {selectedAgent && (
-          <AgentDetails agentName={selectedAgent} />
-        )}
+        {selectedAgent && <AgentDetails agentName={selectedAgent} />}
       </div>
     </div>
   );
