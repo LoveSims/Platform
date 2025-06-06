@@ -2,3 +2,5 @@
 *.pyc
 /.venv
 settings.py
+AgentBank/raw_data/
+
